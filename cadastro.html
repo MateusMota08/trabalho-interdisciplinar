@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Pizzaria Phoenix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="cadastro">
+    <header>
+        <div class="logo-pizzaria">
+            <h1>Pizzaria Phoenix</h1>
+            <span>Pizzas feitas com ingredientes frescos</span>
+        </div>
+        <div class="menu-pizzaria">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="carrinho.html" id="link-carrinho">Carrinho</a></li>
+                <li><a href="login.html" id="link-login" class="menu-ativo">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="cadastro" class="pagina-pizzaria">
+            <div class="caixa-acesso">
+                <h2>Criar conta</h2>
+                <div id="msg-cadastro" class="mensagem-site"></div>
+                <form id="form-cadastro">
+                    <label for="cad-nome">Nome completo</label>
+                    <input type="text" id="cad-nome" name="nome" placeholder="Seu nome" required>
+
+                    <label for="cad-email">Email</label>
+                    <input type="email" id="cad-email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                    <label for="cad-telefone">Telefone</label>
+                    <input type="tel" id="cad-telefone" name="telefone" placeholder="(11) 91234-5678" required>
+
+                    <label for="cad-endereco">Endereço de entrega</label>
+                    <input type="text" id="cad-endereco" name="endereco" placeholder="Rua, número e bairro" required>
+
+                    <label for="cad-senha">Senha</label>
+                    <input type="password" id="cad-senha" name="senha" placeholder="Mínimo de 6 caracteres" required>
+
+                    <label for="cad-confirmar">Confirmar senha</label>
+                    <input type="password" id="cad-confirmar" name="confirmar" placeholder="Repita a senha" required>
+
+                    <button type="submit" class="botao-pedido botao-pedido-cheio">Cadastrar</button>
+                </form>
+                <p>Já tem conta? <a href="login.html">Entrar</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pizzaria Phoenix</p>
+    </footer>
+
+    <script src="stile.js"></script>
+</body>
+</html>

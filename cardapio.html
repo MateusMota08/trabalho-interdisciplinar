@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Pizzaria Phoenix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="cardapio">
+    <header>
+        <div class="logo-pizzaria">
+            <h1>Pizzaria Phoenix</h1>
+            <span>Pizzas feitas com ingredientes frescos</span>
+        </div>
+        <div class="menu-pizzaria">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html" class="menu-ativo">Cardápio</a></li>
+                <li><a href="carrinho.html" id="link-carrinho">Carrinho</a></li>
+                <li><a href="login.html" id="link-login">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="cardapio" class="pagina-pizzaria">
+            <section>
+                <h2 class="titulo-secao">Cardápio</h2>
+                <p class="cardapio-subtitulo">Escolha seus itens e adicione ao carrinho.</p>
+
+                <div class="barra-busca">
+                    <label for="busca-cardapio" class="busca-rotulo">Buscar no cardápio</label>
+                    <input type="search" id="busca-cardapio" placeholder="Digite o nome da pizza ou um ingrediente..." autocomplete="off">
+                    <div class="busca-filtros">
+                        <button type="button" class="chip-filtro chip-ativo" data-filtro="todos">Todos</button>
+                        <button type="button" class="chip-filtro" data-filtro="pizzas-salgadas">Pizzas salgadas</button>
+                        <button type="button" class="chip-filtro" data-filtro="pizzas-doces">Pizzas doces</button>
+                        <button type="button" class="chip-filtro" data-filtro="bebidas">Bebidas</button>
+                    </div>
+                    <p class="busca-info" id="busca-info"></p>
+                </div>
+
+                <div id="busca-vazio" class="busca-vazio" hidden>
+                    <p>Nenhum item encontrado para essa busca.</p>
+                    <button type="button" class="botao-pedido botao-pedido-claro botao-pedido-pequeno" id="busca-limpar">Limpar busca</button>
+                </div>
+
+                <div class="cardapio-grupo" data-categoria="pizzas-salgadas">
+                    <h3 class="cardapio-categoria">Pizzas salgadas</h3>
+                    <ul class="vitrine-pizzas">
+                        <li class="item-cardapio">
+                            <div class="margherita"><img src="pizzamargharida.jpg" alt="Margherita"></div>
+                            <div class="item-detalhes">
+                                <h3>Margherita</h3>
+                                <p class="item-ingredientes">Molho de tomate, muçarela, tomate e manjericão</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 29,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="1" data-nome="Margherita" data-preco="29.90" data-foto="margherita">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="pepperoni"><img src="pizzapeperoni.jpg" alt="Pepperoni"></div>
+                            <div class="item-detalhes">
+                                <h3>Pepperoni</h3>
+                                <p class="item-ingredientes">Molho de tomate, muçarela e pepperoni</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 34,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="2" data-nome="Pepperoni" data-preco="34.90" data-foto="pepperoni">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="quatro-queijos"><img src="pizzaquatroqueijos.jpg" alt="Quatro Queijos"></div>
+                            <div class="item-detalhes">
+                                <h3>Quatro Queijos</h3>
+                                <p class="item-ingredientes">Muçarela, provolone, parmesão e gorgonzola</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 39,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="3" data-nome="Quatro Queijos" data-preco="39.90" data-foto="quatro-queijos">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="frango-catupiry"><img src="pizzafrango.jpg" alt="Frango com Catupiry"></div>
+                            <div class="item-detalhes">
+                                <h3>Frango com Catupiry</h3>
+                                <p class="item-ingredientes">Frango desfiado, catupiry e milho</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 36,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="4" data-nome="Frango com Catupiry" data-preco="36.90" data-foto="frango-catupiry">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="calabresa"><img src="pizzacalabresa.jpg" alt="Calabresa"></div>
+                            <div class="item-detalhes">
+                                <h3>Calabresa</h3>
+                                <p class="item-ingredientes">Molho de tomate, muçarela, calabresa e cebola</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 33,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="5" data-nome="Calabresa" data-preco="33.90" data-foto="calabresa">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="portuguesa"><img src="pizza_portuguesa.png" alt="Portuguesa"></div>
+                            <div class="item-detalhes">
+                                <h3>Portuguesa</h3>
+                                <p class="item-ingredientes">Muçarela, presunto, ovo, cebola, ervilha e azeitona</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 37,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="7" data-nome="Portuguesa" data-preco="37.90" data-foto="portuguesa">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="napolitana"><img src="pizza-napolitana.webp" alt="Napolitana"></div>
+                            <div class="item-detalhes">
+                                <h3>Napolitana</h3>
+                                <p class="item-ingredientes">Muçarela, tomate fatiado, parmesão e orégano</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 32,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="8" data-nome="Napolitana" data-preco="32.90" data-foto="napolitana">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="bacon"><img src="R0325-SL-pizza-de-bacon-fatiado-cebola-caramelizada-1200x675-1.webp" alt="Bacon"></div>
+                            <div class="item-detalhes">
+                                <h3>Bacon</h3>
+                                <p class="item-ingredientes">Molho de tomate, muçarela, bacon crocante e cebola</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 35,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="9" data-nome="Bacon" data-preco="35.90" data-foto="bacon">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="vegetariana"><img src="pizzavegetariana.jpg" alt="Vegetariana"></div>
+                            <div class="item-detalhes">
+                                <h3>Vegetariana</h3>
+                                <p class="item-ingredientes">Muçarela, brócolis, champignon, pimentão e tomate</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 34,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="10" data-nome="Vegetariana" data-preco="34.90" data-foto="vegetariana">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="strogonoff"><img src="pizzastrogonofe.webp" alt="Strogonoff de Frango"></div>
+                            <div class="item-detalhes">
+                                <h3>Strogonoff de Frango</h3>
+                                <p class="item-ingredientes">Strogonoff de frango, muçarela e batata palha</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 38,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="11" data-nome="Strogonoff de Frango" data-preco="38.90" data-foto="strogonoff">Adicionar</button></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cardapio-grupo" data-categoria="pizzas-doces">
+                    <h3 class="cardapio-categoria">Pizzas doces</h3>
+                    <ul class="vitrine-pizzas">
+                        <li class="item-cardapio">
+                            <div class="brigadeiro"><img src="pizzabrigadeiro.jpg" alt="Brigadeiro"></div>
+                            <div class="item-detalhes">
+                                <h3>Brigadeiro</h3>
+                                <p class="item-ingredientes">Chocolate ao leite, granulado e leite condensado</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 36,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="12" data-nome="Brigadeiro" data-preco="36.90" data-foto="brigadeiro">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="banana-canela"><img src="pizza banana com canela.jpg" alt="Banana com Canela"></div>
+                            <div class="item-detalhes">
+                                <h3>Banana com Canela</h3>
+                                <p class="item-ingredientes">Muçarela, banana, açúcar e canela</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 32,90</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="13" data-nome="Banana com Canela" data-preco="32.90" data-foto="banana-canela">Adicionar</button></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cardapio-grupo" data-categoria="bebidas">
+                    <h3 class="cardapio-categoria">Bebidas</h3>
+                    <ul class="vitrine-pizzas">
+                        <li class="item-cardapio">
+                            <div class="refrigerante"><img src="fotococa.webp" alt="Coca 2L"></div>
+                            <div class="item-detalhes">
+                                <h3>Refrigerante 2L</h3>
+                                <p class="item-ingredientes">Garrafa de 2 litros</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 12,00</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="6" data-nome="Refrigerante 2L" data-preco="12.00" data-foto="refrigerante">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="guarana"><img src="guarana2l.webp" alt="Guaraná 2L"></div>
+                            <div class="item-detalhes">
+                                <h3>Guaraná 2L</h3>
+                                <p class="item-ingredientes">Garrafa de 2 litros</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 11,00</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="14" data-nome="Guaraná 2L" data-preco="11.00" data-foto="guarana">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="suco-laranja"><img src="sucodelaranja.webp" alt="Suco de Laranja 1L"></div>
+                            <div class="item-detalhes">
+                                <h3>Suco de Laranja 1L</h3>
+                                <p class="item-ingredientes">Suco natural, jarra de 1 litro</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 10,00</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="15" data-nome="Suco de Laranja 1L" data-preco="10.00" data-foto="suco-laranja">Adicionar</button></div>
+                            </div>
+                        </li>
+                        <li class="item-cardapio">
+                            <div class="agua"><img src="agua.jpg" alt="Água mineral 500ml"></div>
+                            <div class="item-detalhes">
+                                <h3>Água mineral 500ml</h3>
+                                <p class="item-ingredientes">Sem gás ou com gás</p>
+                                <div class="item-rodape"><span class="item-preco">R$ 4,00</span><button type="button" class="botao-pedido botao-pedido-pequeno" data-add data-id="16" data-nome="Água mineral 500ml" data-preco="4.00" data-foto="agua">Adicionar</button></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pizzaria Phoenix</p>
+    </footer>
+
+    <script src="stile.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pizzaria Phoenix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="login">
+    <header>
+        <div class="logo-pizzaria">
+            <h1>Pizzaria Phoenix</h1>
+            <span>Pizzas feitas com ingredientes frescos</span>
+        </div>
+        <div class="menu-pizzaria">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="carrinho.html" id="link-carrinho">Carrinho</a></li>
+                <li><a href="login.html" id="link-login" class="menu-ativo">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="login" class="pagina-pizzaria">
+            <div class="caixa-acesso">
+                <h2>Entrar</h2>
+                <div id="msg-login" class="mensagem-site"></div>
+                <div class="dica-conta-teste">
+                    <strong>Conta de teste</strong><br>
+                    Email: demo@phoenix.com<br>
+                    Senha: 123456
+                    <br><button type="button" class="botao-pedido botao-pedido-claro botao-pedido-pequeno" id="usar-demo">Preencher com a conta de teste</button>
+                </div>
+                <form id="form-login">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                    <label for="login-senha">Senha</label>
+                    <input type="password" id="login-senha" name="senha" placeholder="Digite sua senha" required>
+
+                    <button type="submit" class="botao-pedido botao-pedido-cheio">Entrar</button>
+                </form>
+                <p>Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pizzaria Phoenix</p>
+    </footer>
+
+    <script src="stile.js"></script>
+</body>
+</html>
